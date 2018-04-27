@@ -1,1 +1,877 @@
+pretest: false
+ptrange:
+  first: 0
+  last: 36
+likes: true
+imgsrc: "faces/"
+imgsrcAlt: "http://cdn.rawgit.com/anidroid/files/master/faces/"
+bonus: false
+bonustext: 'You have earned a bonus of 10 cents. Thank you for the good work.'
+server:
+  remote_adr: "https://janmatthis.de/v1"
+  collection: "study2"
+debriefing:
+    id: 'debrief'
+    text1: 'Thank you! <br><br> You have completed the study. Your responses have been recorded. Your participation is an invaluable contribution, without which we will not be able to conduct this research. We would be happy to provide further details and insights, as well as answer any questions you might have: a.levordashka|at|iwm-tuebingen|dot|de. <br><br> '
+    text2: 'Should you wish to withdraw your data, you have the rights to do so in the next two weeks. To do so, email us with the following reference number: '
+    text3: '. Please note that we need this reference number to remove your data. Without it, we will not be able to do so, since we have no other identifying information. Storing it is your responsibility.'
+    retractdata: '<b>rdcode</b>'
+    platform:
+      -
+        id: 'Prolific'
+        code: 'Please press the SUBMIT button below to be redirected to Prolific.'
+      -
+        id: 'Mturk'
+        code: '<b>aaamt</b>'
+endredirect: "https://prolificacademic.co.uk/submissions/582b0b5268630600015b29b7/complete?cc=FL8XM0S9"
+cond:
+  -
+    ntargets: 4
+    ndcues: 1
+    nncues: 0
+    balgen: true
+  -
+    ntargets: 4
+    ndcues: 4
+    nncues: 0
+    balgen: true
+  -
+    ntargets: 4
+    ndcues: 0
+    nncues: 1
+    balgen: true
+  -
+    ntargets: 4
+    ndcues: 0
+    nncues: 4
+    balgen: true
 
+consent: >
+  <h1>Welcome!</h1>
+  <br>
+  <p>Thank you for your interest in this study! The study is conducted by Ana Levordashka at the Leibniz-Institut fuer Wissensmedien (IWM) in Tuebingen, Germany, under the supervision of Prof. Dr. Sonja Utz. It has been approved by the Research Ethics Committee of IWM (ethikkommission|at|iwm-tuebingen|dot|de).</p>
+  <p>
+  <b>Purpose and procedure.</b> We investigate how people process the information they see on social media and networking websites, such as Facebook and Twitter. You will read social media updates and answer questions about them. This study does not involve any foreseeable risk or discomfort.<br>
+  <b>Duration and compensation.</b> The study takes about 10 minutes. You will receive 1.1 GBP for your participation.<br>
+  <b>Confidentiality.</b> This study is anonymous. Your responses will be assigned an anonymous ID. We will not collect any identifying information beyond basic demographics. The data will be used solely for research purposes.<br>
+  <b>Voluntary participation.</b> Your participation in the study is voluntary. You can stop participating at any time by simply exiting the survey. If you do so, we will not store your data.<br>
+  <b>Data withdrawal.</b> Within 4 weeks of completing the survey, you will have the right to withdraw your data by sending us an email with an anonymous code we will provide at the end of the survey.<br>
+  </p>
+  <p>If you have further questions or concerns regarding the study or your participation, you may contact the experimenter, Ana Levordashka (a.levordashka|at|iwm-tuebingen|dot|de / 00 49 7071 979-347) or the principal investigator, Sonja Utz (s.utz|at|iwm-tuebingen|dot|de).
+  <p>You can download a pdf copy of this form here:  <a href='https://cdn.rawgit.com/anidroid/files/master/infconsent.pdf' target="_blank"> [pdf]</a></p>
+  </p>
+  <p>
+  <b>By agreeing to proceed, you declare that you are 18 years of age or older, understand the statements above, and freely consent to participate in the study. Press NEXT to proceed. </b><br><br>
+  </p>
+blocks:
+  -
+    type: stim
+    instr:
+      1: >
+        <h3>Instructions</h3>
+        <h4>You are about to see a number of social media posts. Browse through the posts at your own pace and mark the ones you consider interesting using the corresponding Like (thumbs-up) buttons. </h4>
+        <h4>Afterwards you will work on some additional tasks. Specific instructions will follow.</h4>
+        <p><i>It is very important that you stay on the same page throughout the study. If you try to reload or reopen the page, use the browser back button, etc. you will exit the study, lose your responses, and not be able to return. This can also happen if you switch tabs and open additional pages.</i></p>
+        <h4>Ready? Press NEXT to proceed.</h4>
+      2: >
+        <h3>Instructions</h3>
+        <h4>You are about to see a number of social media posts. Browse through the posts at your own pace and mark the ones you consider interesting using the corresponding Like (thumbs-up) buttons. </h4>
+        <h4>Afterwards you will work on a task that involves selecting <i>experts</i> who could provide a second opinion on a series of topics. Specific instructions will follow.</h4>
+        <p><i>It is very important that you stay on the same page throughout the study. If you try to reload or reopen the page, use the browser back button, etc. you will exit the study, lose your responses, and not be able to return. This can also happen if you switch tabs and open additional pages.</i></p>
+        <h4>Ready? Press NEXT to proceed.</h4>
+    eachT: true
+    stimT: 40
+    randomized: false
+    trials:
+      -
+        trialID: 1
+        layout: stim
+  -
+    type: pr
+    QID: PR
+    eachT: true
+    randomized: true
+    instr: >
+      <h3>You have finished reading the posts.</h3>
+      <p>Next, we would like to test your memory for the posts you've just read. You will see the same people together with certain words. Your task is to tell whether the word you see was mentioned in the post of the person whose face and name appear with the word  (OLD word) or whether it was not mentioned in the post (NEW word).</p>
+      <p>Example:</p>
+      <div class='example'>
+            <div class="card">
+                <div class="stimcomplete">
+                    <img src="faces/m/6.jpg">
+                    <div class="content">
+                        <h1>Thomas</h1>
+                        <p>I am thrilled that Bob Dylan won the Nobel prize for literature.</p>
+                        <div class="footer">
+                            <i class="fa fa-share" aria-hidden="true"></i>
+                            <i class="fa fa-retweet" aria-hidden="true"></i>
+                            <a class="btn btn-sm btn-like disabled" href="#" role="button"><i class="fa fa-thumbs-up" aria-hidden="true"></i></a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <p>In the example below, the correct response would be 'OLD', because the word 'prize' appears in the sentence:</p>
+            <div class=" q" id="qt21" style="">
+                  <div class="row">
+                      <div class="col-sm-12" id="q2text1"></div>
+                  </div>
+                  <div class="row">
+                      <div class="col-sm-3" id="q2stim1">
+                        <div class="card">
+                          <div class="stimtarget">
+                            <img src="faces/m/6.jpg">
+                            <h1>Thomas</h1>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="q" id="q2probe1">
+                        <div class="probe" data-probe="prize">prize</div>
+                      </div>
+                      <div class="q" id="q2resp1">
+                        <div class="q1-choices">
+                          <a class="btn btn-raised btn-sm" href="#" role="button" data-resp="new">new</a>
+                          <a class="btn btn-raised btn-sm selected" href="#" role="button" data-resp="old">old</a>
+                        </div>
+                      </div>
+                  </div>
+            </div>
+            <br>
+            <p>In the example below, the correct response would be 'NEW', because the word 'astronaut' does not appear in the sentence:</p>
+            <div class=" q" id="qt21" style="">
+                    <div class="row">
+                        <div class="col-sm-12" id="q2text1"></div>
+                    </div>
+                    <div class="row">
+                        <div class="col-sm-3" id="q2stim1">
+                          <div class="card">
+                            <div class="stimtarget">
+                              <img src="faces/m/6.jpg">
+                              <h1>Thomas</h1>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="q" id="q2probe1">
+                          <div class="probe" data-probe="inbox">astronaut</div>
+                        </div>
+                    <div class="q" id="q2resp1">
+                      <div class="q1-choices">
+                          <a class="btn btn-raised btn-sm selected" href="#" role="button" data-resp="new">new</a>
+                          <a class="btn btn-raised btn-sm" href="#" role="button" data-resp="old">old</a>
+                      </div>
+                      </div>
+                    </div>
+                </div>
+      </div>
+      <br>
+      <p>If you have understood the instructions and feel ready to proceed, press NEXT. Please keep in mind that you will not be receiving feedback on your responses. Try to work as quickly as possible.</p>
+    trials:
+      -
+        trialID: 1
+        grouplbl: SAME
+        layout: qt2
+        text: 'Do you think the word below appeared in the sentence posted by this person?'
+        probes: 'PR_PRB_SAME'
+        options:
+          - new
+          - old
+        nprb: NA
+      -
+        trialID: 1
+        grouplbl: OTHR
+        layout: qt2
+        text: 'Do you think the word below appeared in the sentence posted by this person?'
+        probes: 'PR_PRB_OTHR'
+        options:
+          - new
+          - old
+        nprb: NA
+  -
+    type: ii
+    QID: II
+    eachT: true
+    randomized: true
+    instr: >
+      <h3>You have completed the previous task.</h3>
+      <p>You will now see a number of questions related to the people whose posts you saw previously. Please answer each question. If you are not certain about an answer but have an intuition, please follow your intuition. If you have absolutely no idea, you can skip the question.</p>
+    trials:
+      -
+        trialID: 1
+        layout: qt1
+        text: 'Which topic would you say this person is knowledgeable about or interested in?'
+        probes: 'NA'
+        options: 'iiprobes'
+        nprb: 10
+  -
+    type: fc
+    data: FCA
+    QID: TI
+    eachT: false
+    randomized: false
+    instr: >
+            <h3>You have now completed the previous task.</h3>
+            <p>Next, we ask you to make a number of choices. We will show you pairs of people and ask you to select the one that you feel is more <b>approachable</b>. By approachable we mean someone who is easy to talk to or deal with; friendly.</p>
+            <p>We are aware that this is a rather peculiar judgment to make. There are no right or wrong answers, we are simply interested in your opion. Please use on your intuition and work as quickly as possible.</p>
+    trials:
+      -
+        trialID: 1
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 2
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 3
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 4
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 1
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 2
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 3
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 4
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 1
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 2
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 3
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+      -
+        trialID: 4
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'approachable'
+  -
+    type: fc
+    data: FCC
+    QID: TI
+    eachT: false
+    randomized: true
+    instr: >
+      <h3>You have now completed the previous task.</h3>
+      <p>Next, we ask you to select the person that you feel is more <b>competent</b>. By competent we mean a person who is able to perform her or his tasks well or efficiently, regardless of what these task might be.</p>
+      <p>We are aware that this is a rather peculiar judgment to make. There are no right or wrong answers, we are simply interested in your opion. Please use on your intuition and work as quickly as possible.</p>
+    trials:
+      -
+        trialID: 1
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 2
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 3
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 4
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 1
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 2
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 3
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 4
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 1
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 2
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 3
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+      -
+        trialID: 4
+        layout: qt3
+        text: 'Please select the person who is more...'
+        probes: 'competent'
+  -
+      type: flwp
+      eachT: false
+      randomized: false
+      instr: >
+        <h3>You are nearly done!</h3>
+        <p>Please answer these last couple of questions about yourself and your media use.</p>
+      trials:
+        -
+          layout: qt4
+          QID: 3
+          QT: 1
+          QLB: 'OWNDOM'
+          text : 'Which of these domains are you interested in?'
+          instr: 'Select a domain by pressing it. Deselect by pressing again. Select all that apply and press Submit whenever you are ready.'
+          options:
+                -
+                  lab: Teaching
+                  val: 9
+                -
+                  lab: Design
+                  val: 3
+                -
+                  lab: Management
+                  val: 2
+                -
+                  lab: Programming
+                  val: 7
+                -
+                  lab: Biology
+                  val: 1
+                -
+                  lab: Architecture
+                  val: 0
+                -
+                  lab: Photography
+                  val: 6
+                -
+                  lab: Advertising
+                  val: 4
+                -
+                  lab: Psychology
+                  val: 8
+                -
+                  lab: Finance
+                  val: 5
+        -
+          trialID: 1
+          layout: qt4
+          QID: 4
+          QT: 2
+          QLB: 'SMUFREQ'
+          text: 'How often do you use social media sites, such as Facebook or Twitter?'
+          instr: 'Select your response and press Submit.'
+          options:
+            -
+              lab: never
+              val: 0
+            -
+              lab: once a month
+              val: 1
+            -
+              lab: several times a month
+              val: 2
+            -
+              lab: once a week
+              val: 3
+            -
+              lab: several times a week
+              val: 4
+            -
+              lab: once a day
+              val: 5
+            -
+              lab: several times a day
+              val: 6
+            -
+              lab: once an hour
+              val: 7
+            -
+              lab: several times an hour
+              val: 8
+            -
+              lab: all the time
+              val: 9
+        -
+            trialID: 3
+            layout: qt4
+            QID: 5
+            QT: 2
+            QLB: 'MC'
+            VT: 'num'
+            text: 'What instruction did you receive at the beginning of the study?'
+            instr: 'Below you see a number of instructions. Select the one that matches what you read at the beginning of the study. The texts are rather similar, so please choose carefully. You can ignore punctuation and capitalisation.'
+            options:
+              -
+                lab: You are about to see a number of social media posts. Specific instructions will follow.
+                val: 3
+              -
+                lab: You are about to see a number of social media posts. Browse through the posts at your own pace and mark the ones you consider interesting using the corresponding Like (thumbs-up) buttons. Afterwards you will work on some additional tasks. Specific instructions will follow.
+                val: 1
+              -
+                lab: You are about to see a number of social media posts. Please read the posts carefully. Afterwards you will work on a task that involves selecting experts who could provide a second opinion on a series of topics. Specific instructions will follow.
+                val: 4
+              -
+                lab: You are about to see a number of social media posts. Browse through the posts at your own pace and mark the ones you consider interesting using the corresponding Like (thumbs-up) buttons. Afterwards you will work on a task that involves selecting experts who could provide a second opinion on a series of topics. Specific instructions will follow.
+                val: 2
+              -
+                lab: If you did not read the instructions, that is okay. Please let us know by selecting this option. If you did read the instruction, but no longer remember, please select one of the options above -- whichever one seems most familiar.
+                val: 0
+        -
+            trialID: 3
+            layout: qt4
+            QID: 5
+            QT: 2
+            QLB: 'ATT'
+            VT: 'num'
+            text: 'It will be tremendously helpful if you let us know how attentive you were during this study.'
+            instr: ' Your answer to this question will not affect your participation or reimbursement in any way. We will not report it to Prolific. All we want to know is how seriously to regard your data. Please select the sentence that best describes your behavior during the study.'
+            options:
+              -
+                lab: You answered all questions carefully.
+                val: 0
+              -
+                lab: You answered most questions carefully but were sometimes distracted.
+                val: 1
+              -
+                lab: You answered some questions carefully but were often distracted.
+                val: 2
+              -
+                lab: You were mostly distracted and did not answer carefully.
+                val: 3
+              -
+                lab: Your responses were mostly random.
+                val: 4
+        -
+          trialID: 4
+          layout: qt5
+          QID: 7
+          QLB: 'PAID'
+          QT: 3
+          required: true
+          text: 'Please enter your Prolific ID:'
+          instr: 'It can be found at the top of this webpage or when going to your account info:'
+ii:
+ -
+   probe: Architecture
+   cues:
+      -
+        id: ARCH1
+        text: 'Working on new designs for the city/s tallest building.'
+      -
+        id: ARCH2
+        text: 'Ten years ago today, this beautiful building existed only in my head and blueprints. And look at it now!'
+      -
+        id: ARCH3
+        text: 'New project starting in Beijing. Remodeling an old library building from the ground up'
+      -
+        id: ARCH4
+        text: 'Being interviewed about my latest creation: Residential complex with rooftop pools and forests'
+ -
+   probe: Biology
+   cues:
+      -
+        id: BIO1
+        text: 'Creating stem cell populated tissue scaffolds and organs began in my lab more than 10 years ago!'
+      -
+        id: BIO2
+        text: 'I spend my days working on disease mechanisms and models, pathogens, molecular medicine. Ask me anything'
+      -
+        id: BIO3
+        text: 'Stalk-eyed Fruit Fly, male and female (Pelmatops tangliangi, Tephritidae). Happy biology/entomology geek.'
+      -
+        id: BIO4
+        text: 'Our lab has an Open Day. Join us to find out more about cellular dynamics (nucleus, cytoskeleton, membranes, intracellular trafficking), cell division, and other fun stuff we do!'
+ -
+   probe: Design
+   cues:
+      -
+        id: DES1
+        text: 'Doing q&a on Instagram, on coming up with creative ideas for illustration and typesetting.'
+      -
+        id: DES2
+        text: 'Creating elegant interfaces? This is great but usability matters! Always test your work on real users.'
+      -
+        id: DES3
+        text: 'Today at 2 pm the #iadlab15 at the school for design starts. Topic “Design vs Technology”. #interactiondesign'
+      -
+        id: DES4
+        text: 'The promise: “become a designer, change the world” What actually happens: “become a designer, create tickets for developers to fix stuff'
+ -
+   probe: Advertising
+   cues:
+      -
+        id: AD1
+        text: 'Creating a new branding campaign for our clients. Making their product stand out.'
+      -
+        id: AD2
+        text: 'My new trainees just arrived! We will start examining different social media campaigns that made product sales skyrocket'
+      -
+        id: AD3
+        text: 'Latest campaign we worked on is featured in Adweek. Check it out http://%&link&%//'
+      -
+        id: AD4
+        text: 'It is not just billboards and flyers: We always make sure our clients reach out beyond the usual channels http://%&link&%//'
+      -
+        id: AD5
+        text: 'Just back from an excellent workshop on promoting your clients’ products in unusual but highly effective ways. Eager to apply this to the campaigns I am developing'
+ -
+   probe: Finance
+   cues:
+      -
+        id: FIN1
+        text: 'As of next month I will be joining Goldman Sachs helping Americans better manage credit card debt http://%&link&%// Cc @FastCompany'
+      -
+        id: FIN2
+        text: 'On the latest podcast, I answer questions like, Is it worth buying real estate just to safely invest money? Tune in for more!'
+      -
+        id: FIN3
+        text: 'A rule for active traders. When the $spx stock is below the 8/21day moving average, be tactical. #stockmarket #trading'
+      -
+        id: FIN4
+        text: 'Love the challenge when stock markets get like this. A successful trader has the ability to stay rational and think #money when every1 else is getting emotional.'
+ -
+   probe: Photography
+   cues:
+      -
+        id: PHO1
+        text: 'Catching a flight to Oaxaca, a bag full of camera lenses. 2 days trying to capture the beauty of sea turtles! #Mexico'
+      -
+        id: PHO2
+        text: 'Lifestyle photoshoot at the exhibition Madrid #Lifestyle #Portraits http://%&link&%//'
+      -
+        id: PHO3
+        text: 'Check out my work for Lonely Nature: Photo tours to #Patagonia, #Tansania, #Svalbard and more! http://%&link&%//'
+      -
+        id: PHO4
+        text: 'I’ll be behind the lens, trying to captures the Teej Festival in Jaipur, India this November. Busy schedule coming up http://%&link&%//'
+      -
+        id: PHO5
+        text: 'Two weeks from now, I’ll be traveling to Japan to exhibit my work. Black & White landscapes and portraits. See some of the images on Instagram http://%&link&%//'
+      -
+        id: PHO6
+        text: 'Spending days and days behind the lens, trying to capture the right moment and put it in my portfolio :)'
+ -
+   probe: Programming
+   cues:
+      -
+        id: PROG1
+        text: 'First web page of my career. Was a C++ person then. I remember using lots of table tags and I liked it.'
+      -
+        id: PROG2
+        text: 'The MIT License, Line by Line. 171 words every web developer should understand.'
+      -
+        id: PROG3
+        text: 'Front-end developer aka JavaScript wizard (jQuery, React.js, Angular) also HTML5/CSS3, and PHP. Hire me!'
+      -
+        id: PROG4
+        text: 'Advanced Java Script Tutorial #3  http://%&link&%//  via @YouTube'
+      -
+        id: PROG5
+        text: 'Does someone know the cmd to compile single PHP extensions in windows?like- configure --disable-all --with-x=shared;nmake extension #lazyweb #php'
+      -
+        id: PROG6
+        text: 'Currently refactoring old code... man what did i write 1 year ago...'
+ -
+   probe: Psychology
+   cues:
+      -
+        id: PSY1
+        text: 'Our latest article in Nature Human Behavior: Dissecting the effect of candidate appearance on voting'
+      -
+        id: PSY2
+        text: 'How to deal with Social Phobias? My new article in the Journal of Mental Illness http://%&link&%// #mentalhealth #mentalillness'
+      -
+        id: PSY3
+        text: 'Fascinating new research domain of developmental science, led by my colleagues at the Behavior Research Institute'
+      -
+        id: PSY4
+        text: 'my supervisor has agreed to my dissertation topic proposal: borderline personality disorder! so excited to get started'
+      -
+        id: PSY6
+        text: 'Our new study on child development suggests that Lasting happiness in children is not based on external circumstances.'
+      -
+        id: PSY8
+        text: 'Excited to announce that I have been awarded a research grant to study cognitive biases and their effect on close relationships.'
+ -
+   probe: Teaching
+   cues:
+      -
+        id: TEA1
+        text: 'My first training at an elementary school starts tomorrow! Feeling ready :-)'
+      -
+        id: TEA2
+        text: 'COOL RESOURCES: Art resources for educators. Totally using those in my class next week.'
+      -
+        id: TEA3
+        text: 'Lots my colleagues in primary school love this technique: How to Create a Self-Graded Quiz in Google Forms'
+      -
+        id: TEA4
+        text: 'Tip for my students: If the subclause replaces the subject you don’t need to repeat it in the following main clause.'
+      -
+        id: TEA5
+        text: 'Tried some of these today and my students loved them: After-School Activities for Middle Schoolers http://%&link&%//'
+      -
+        id: TEA6
+        text: 'Useful tips for the classroom! Especially for those of us working with secondary school kids. Colleagues, check these out: http://%&link&%//'
+probesNovel:
+  - Kindergartens
+  - Literature
+  - Statistics
+  - Sculpture
+  - Engineering
+  - Medicine
+  - Law
+  - Accounting
+  - Pharmacology
+  - Television
+  - Football
+  - Yoga
+cuesNeutral:
+  -
+    id: NEUT1
+    text: 'To do list for the next month: all the work I have been pretending doesn’t exist for the past two weeks.'
+    probe: 'month'
+  -
+    id: NEUT2
+    text: 'No interruptions this afternoon please. Watching presentations on livestream and editing.'
+    probe: 'afternoon'
+  -
+    id: NEUT3
+    text: 'Looking ahead to work tomorrow, cannot believe how much there is to get through in such a short time ... #arghh!'
+    probe: 'believe'
+  -
+    id: NEUT4
+    text: 'Went for a nice 2 hour walk with a good friend, brainstorming ideas. Tomorrow back to the office again after a short break'
+    probe: 'break'
+  -
+    id: NEUT5
+    text: 'it is Friday morning and my office is much too cold, but with Twitter as my witness I will spend the next week writing'
+    probe: 'writing'
+  -
+    id: NEUT6
+    text: 'Shoutout to the friend who has inspired me to spring clean my inbox this morning.'
+    probe: 'inbox'
+  -
+    id: NEUT7
+    text: 'Oh, just remembered ... happy Friday everybody!'
+    probe: 'everybody'
+  -
+    id: NEUT8
+    text: 'I am sitting in the garden and enjoying the sun. Live is good!'
+    probe: 'garden'
+  -
+    id: NEUT9
+    text: 'Just woke up and thought about travelling. 3 hours later in the train to the sea.'
+    probe: 'train'
+  -
+    id: NEUT10
+    text: 'I invited the new girl from my class to join me and my friends for lunch.'
+    probe: 'lunch'
+  -
+    id: NEUT11
+    text: 'The season finale was amazing. Sad that it is over but even more so I am happy that it happened'
+    probe: season
+  -
+    id: NEUT12
+    text: 'Best part of the article.. Not knowing what you are doing is a skill you cannot teach'
+    probe: skill
+  -
+    id: NEUT13
+    text: 'On my way to the cinema. It has been a while. I can barely remember the last film I saw'
+    probe: cinema
+  -
+    id: NEUT14
+    text: 'I spilled coffee all over my desk. Goodbye beautiful notes and doodles. And yeah also laptop.'
+    probe: coffee
+  -
+    id: NEUT15
+    text: 'Took a break from social media and liked it but it is good to be back'
+    probe: media
+  -
+    id: NEUT16
+    text: 'I like active, breathtaking vacation. I like lazy, relaxing vacations. I guess I just like vacations.'
+    probe: active
+  -
+    id: NEUT17
+    text: 'USA complete. Its been great catching up with Norman Campbell, Sarah Fresen Lucas Michigan, Dennis Mckee.'
+    probe: complete
+  -
+    id: NEUT18
+    text: 'My first day at the university. This is a great old city! Soooo many bikes'
+    probe: university
+  -
+    id: NEUT19
+    text: 'More pics of meeting my family. Happy to be back in NZ'
+    probe: family
+  -
+    id: NEUT20
+    text: 'Successfully submitted my Bachelor thesis. Big thanks to my advisor, he is the best. It has been a privilege to learn from the best'
+    probe: thesis
+  -
+    id: NEUT21
+    text: 'Sunday morning in Switzerland, an exciting view of this country: people going to church!'
+    probe: country
+  -
+    id: NEUT22
+    text: 'An Ode to Berlin: <link>. Love Berlin, unique!'
+    probe: unique
+  -
+    id: NEUT23
+    text: 'We wish you a happy StartingDay! Wherever you are in your travel, be proud of who you are!'
+    probe: wish
+  -
+    id: NEUT24
+    text: 'First day of work! I need a coffee break soon'
+    probe: soon
+  -
+    id: NEUT25
+    text: 'Starting shortly: A soccer game between a sunshine Spain whose economy system is still in big trouble, and isolated Iceland.'
+    probe: shortly
+  -
+    id: NEUT26
+    text: 'Two packs of cheese and a bottle of wine in my bag. This is Paris, a paradise! '
+    probe: cheese
+  -
+    id: NEUT27
+    text: 'A very small victory. Discovered a radio on the way in Hurth!'
+    probe: radio
+  -
+    id: NEUT28
+    text: 'One might think that the weather is a joke ...just Germany '
+    probe: weather
+  -
+    id: NEUT29
+    text: 'I AM ON VACATION! In the next 3 weeks expect only scheduled Tweets. See you soon!'
+    probe: expect
+  -
+    id: NEUT30
+    text: 'Great! I am in Italy and there is internet in the airport'
+    probe: internet
+  -
+    id: NEUT31
+    text: 'Best news in years. Last summer, on a night like this, I squeezed onto a balcony in Berlin with a group of folks, watching the trams zip by a few times an hour'
+    probe: years
+  -
+    id: NEUT32
+    text: 'Today I saw my first free Tarantula, walking near the house! Best day of my week!!!'
+    probe: house
+  -
+    id: NEUT33
+    text: 'Last chance to interact with me! And I know you all love me!'
+    probe: know
+  -
+    id: NEUT34
+    text: 'Happy romantic dinner: beers, great food, great place'
+    probe: beers
+  -
+    id: NEUT35
+    text: 'Remember when voting was fun in this country?'
+    probe: country
+  -
+    id: NEUT36
+    text: 'Good Morning Sunshine! Great to see you again'
+    probe: morning
+  -
+    id: NEUT37
+    text: 'I should buy a boat and go to the UK. Yes literally the UK!'
+    probe: literally
+  -
+    id: NEUT38
+    text: 'After two and a half years on Twitter the beginner tips still appear. How can I opt out of the tutorial?'
+    probe: appear
+  -
+    id: NEUT39
+    text: 'Still thinking about it...Should I get the new Warcraft game or not? '
+    probe: get
+  -
+    id: NEUT40
+    text: 'Rain with sunshine on the ract16. Best Festival Weather'
+    probe: rain
+  -
+    id: NEUT41
+    text: 'After 5 hours here: I aaam hungry. Do you know where is the next coffee bar? Please help. Starving'
+    probe: help
+  -
+    id: NEUT42
+    text: 'My dear ex colleagues, 6 years already! I miss our great conversations during the break.'
+    probe: miss
+  -
+    id: NEUT43
+    text: 'One year ago already! Happy birthday again, Alisia'
+    probe: again
+names:
+  m:
+   - Lukas
+   - Frederik
+   - Deniz
+   - Florian
+   - Gabriel
+   - Tobias
+   - Jack
+   - Steven
+   - George
+   - Kevin
+   - Michael
+   - Peter
+   - Barry
+   - Collin
+   - Bob
+   - Rudy
+   - Jim
+  f:
+   - Leonie
+   - Jill
+   - Lara
+   - Maren
+   - Andrea
+   - Caroline
+   - Teresa
+   - Linda
+   - Claudia
+   - Annie
+   - Laura
+   - Coleen
+   - Simone
+   - Judy
+   - Candy
+   - Cara
+- Sarah
